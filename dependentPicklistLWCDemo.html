@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Dependent Picklist - Account without Apex">
+        <div class="slds-var-m-around_medium">
+            <template if:true={regionPicklistData}>
+                <lightning-combobox
+                name="regionlist"
+                label="Region"
+                value=""
+                placeholder="Select Region"
+                options={regionPicklistData.values}
+                onchange={handleRegionChange} ></lightning-combobox>
+            </template>
+
+            <template if:true={finalregionSubPicklistData}>
+                <lightning-combobox
+                name="subregionlist"
+                label="Sub Region"
+                value=""
+                placeholder="Select Sub Region"
+                options={finalregionSubPicklistData}
+                onchange={handleSubRegionChange} ></lightning-combobox>
+            </template>
+            
+        </div>
+    
+    </lightning-card>
+</template>
